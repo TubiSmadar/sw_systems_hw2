@@ -5,7 +5,7 @@ int main() {
 
     while(1){
         char type;
-        
+
         // scan the type of action to be performd
         scanf("%c", &type);
 
@@ -29,6 +29,8 @@ int main() {
                 exit(1);
         }
     }
+
+    printf("\n");
     return 0;
 }
 
