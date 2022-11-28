@@ -5,8 +5,7 @@ int main() {
 
     while(1){
         char type;
-        int i,j;
-
+        
         // scan the type of action to be performd
         scanf("%c", &type);
 
@@ -17,10 +16,12 @@ int main() {
                 analizeMat();
                 continue;
             case 'B': // check if their is a path from 2 given vertex, i and j. 
+                int i, j;
                 scanf("%d %d", &i, &j);
                 hasA_Path(i,j);
                 continue;
             case 'C': // find the shortest path from 2 given vertex, i and j. 
+                int i, j;
                 scanf("%d %d", &i, &j);
                 shortestPath(i,j);
                 continue;

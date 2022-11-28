@@ -48,15 +48,16 @@ void analizeMat(){
     for(int k=0; k<MATRIX_LENGTH; k++){
         for(int i=0; i<MATRIX_LENGTH; i++){
             for(int j=0; j<MATRIX_LENGTH; j++){
-                if(mat[i][k] == 0 ||  mat[k][j] == 0)
+
+                if(mat[i][k] == 0 ||  mat[k][j] == 0) // their is no path for i to j through k 
                     continue; 
-                if(mat[i][j] == 0)
+                if(mat[i][j] == 0) // their is no path directly from i to j. go through k
                     mat[i][j] = mat[i][k] + mat[k][j];
-                else
+                else    // get the min path between the 2 options. 
                      mat[i][j] = min(mat[i][j],mat[i][k]+mat[k][j]);
-            }
-        }
-    }
+            } // end of j for loop
+        } // end of i for loop 
+    }   // end of k for loop
 
     // Retrun the middle diagonal line to be 0. 
     for(int i=0;i<MATRIX_LENGTH;i++)
